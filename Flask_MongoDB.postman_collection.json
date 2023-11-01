@@ -1,0 +1,703 @@
+{
+	"info": {
+		"_postman_id": "3175142f-116e-4d6c-902e-cf1821847872",
+		"name": "Flask_MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18895765"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"joy\",\n    \"last_name\": \"123456\",\n    \"email\": \"joy@subi.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}register",
+					"host": [
+						"{{url}}register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"siva\",\n    \"last_name\": \"123456\",\n    \"email\": \"siva@subi.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}register",
+							"host": [
+								"{{url}}register"
+							]
+						}
+					},
+					"status": "BAD REQUEST",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.10.12"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Nov 2023 06:57:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Email is already in use\"\n}"
+				},
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"joy\",\n    \"last_name\": \"123456\",\n    \"email\": \"joy@subi.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}register",
+							"host": [
+								"{{url}}register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.10.12"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Nov 2023 07:07:42 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User registered\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"siva@subi.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}login",
+					"host": [
+						"{{url}}login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"siva@subi.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}login",
+							"host": [
+								"{{url}}login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.10.12"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Nov 2023 07:07:56 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "162"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InNpdmFAc3ViaS5jb20iLCJleHAiOjE2OTg4MjYwNzZ9.YLqm1hs6leCOr7BfKiU0wtirdmlzfC0w_LhENhRL9GM\"\n}"
+				},
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"siva@subi.com\",\n    \"password\": \"00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}login",
+							"host": [
+								"{{url}}login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.10.12"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Nov 2023 07:08:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Login failed\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Template",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"template_name\": \"for testing \",\n    \"subject\": \"good \",\n    \"body\": \"test \"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}template",
+					"host": [
+						"{{url}}template"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Template",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"template_name\": \"for testing \",\n    \"subject\": \"good \",\n    \"body\": \"test \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}template",
+							"host": [
+								"{{url}}template"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.10.12"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Nov 2023 07:09:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "224"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Template created\",\n    \"template\": {\n        \"_id\": \"02e116a3-6598-4bd5-abcc-60eff7e943ec\",\n        \"body\": \"test \",\n        \"created_by\": \"siva@subi.com\",\n        \"subject\": \"good \",\n        \"template_name\": \"for testing \"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Template",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}template",
+					"host": [
+						"{{url}}template"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Template",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}template",
+							"host": [
+								"{{url}}template"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.10.12"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Nov 2023 07:09:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "214"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"templates\": [\n        {\n            \"_id\": \"02e116a3-6598-4bd5-abcc-60eff7e943ec\",\n            \"body\": \"test \",\n            \"created_by\": \"siva@subi.com\",\n            \"subject\": \"good \",\n            \"template_name\": \"for testing \"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Template By _id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}template/02e116a3-6598-4bd5-abcc-60eff7e943ec",
+					"host": [
+						"{{url}}template"
+					],
+					"path": [
+						"02e116a3-6598-4bd5-abcc-60eff7e943ec"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Template By _id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}template/02e116a3-6598-4bd5-abcc-60eff7e943ec",
+							"host": [
+								"{{url}}template"
+							],
+							"path": [
+								"02e116a3-6598-4bd5-abcc-60eff7e943ec"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.10.12"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Nov 2023 07:10:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "161"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"02e116a3-6598-4bd5-abcc-60eff7e943ec\",\n    \"body\": \"test \",\n    \"created_by\": \"siva@subi.com\",\n    \"subject\": \"good \",\n    \"template_name\": \"for testing \"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Template",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"template_name\": \"cars\",\n    \"subject\": \"speed\",\n    \"body\": \"black\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}template/02e116a3-6598-4bd5-abcc-60eff7e943ec",
+					"host": [
+						"{{url}}template"
+					],
+					"path": [
+						"02e116a3-6598-4bd5-abcc-60eff7e943ec"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Template",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"template_name\": \"cars\",\n    \"subject\": \"speed\",\n    \"body\": \"black\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}template/02e116a3-6598-4bd5-abcc-60eff7e943ec",
+							"host": [
+								"{{url}}template"
+							],
+							"path": [
+								"02e116a3-6598-4bd5-abcc-60eff7e943ec"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.10.12"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Nov 2023 07:10:39 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "216"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Template updated\",\n    \"template\": {\n        \"_id\": \"02e116a3-6598-4bd5-abcc-60eff7e943ec\",\n        \"body\": \"black\",\n        \"created_by\": \"siva@subi.com\",\n        \"subject\": \"speed\",\n        \"template_name\": \"cars\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Template",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"template_name\": \"car\",\n    \"subject\": \"speed\",\n    \"body\": \"black\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}template/02e116a3-6598-4bd5-abcc-60eff7e943ec",
+					"host": [
+						"{{url}}template"
+					],
+					"path": [
+						"02e116a3-6598-4bd5-abcc-60eff7e943ec"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Template",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"template_name\": \"car\",\n    \"subject\": \"speed\",\n    \"body\": \"black\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}template/02e116a3-6598-4bd5-abcc-60eff7e943ec",
+							"host": [
+								"{{url}}template"
+							],
+							"path": [
+								"02e116a3-6598-4bd5-abcc-60eff7e943ec"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.10.12"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Nov 2023 07:10:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Template deleted\"\n}"
+				}
+			]
+		}
+	]
+}
