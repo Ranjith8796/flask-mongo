@@ -20,8 +20,7 @@ users_collection = db.users
 templates_collection = db.templates
 
 bcrypt = Bcrypt(app)
-SECRET_KEY = secrets.token_hex(32)
-app.config['SECRET_KEY'] = SECRET_KEY
+app.config['SECRET_KEY'] = Constants.SECRET_KEY
 
 
 # Decorator for JWT token verification
