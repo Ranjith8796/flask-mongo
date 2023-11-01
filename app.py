@@ -7,6 +7,7 @@ import datetime
 from flask_bcrypt import Bcrypt
 import secrets
 import uuid
+import traceback
 
 app = Flask(__name__)
 
@@ -38,10 +39,10 @@ def token_required(f):
             data = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
             current_user = users_collection.find_one({'email': data['email']})
         except jwt.ExpiredSignatureError as e:
-            print(f"Expired token: {e}")
+            traceback.print_exc()
             return jsonify({'message': 'Token has expired'}), 403
         except jwt.InvalidTokenError as e:
-            print(f"Invalid token: {e}")
+            traceback.print_exc()
             return jsonify({'message': 'Invalid token'}), 403
         
         if not current_user:
